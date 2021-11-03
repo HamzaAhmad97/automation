@@ -2,6 +2,15 @@ import re
 
 
 def check_exists(query):
+    """
+    Check if the query exists in the file existing-constacts.txt.
+
+    Args:
+        query (str): A string that might be a phone number or an email.
+
+    Returns:
+        bool: True if the query string exists in that file, and False otherwise.
+    """
     with open('assets/existing-contacts.txt', 'r') as e:
         return query in e.read()
 
