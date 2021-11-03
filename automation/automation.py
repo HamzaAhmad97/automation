@@ -38,7 +38,7 @@ for number in phone_numbers:
 emails = sorted(list(set(list(filter(lambda v: not check_exists(v), [
                 item[0] for item in re.findall(r"(\w+@(\w+[-]?)+\.(com|info|net|org|biz))", content)])))))
 with open('phone_numbers.txt', 'a') as p:
-    for num in new_phone_numbers:
+    for num in sorted(new_phone_numbers):
         p.write(num + '\n')
 
 with open('emails.txt', 'a') as e:
